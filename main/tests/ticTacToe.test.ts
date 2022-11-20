@@ -1,4 +1,4 @@
-import ticTacToe from '../src/ticTacToe';
+import ticTacToe from '../src/ticTacToe/ticTacToe';
 import 'jest-canvas-mock';
 
 let newGame: ticTacToe;

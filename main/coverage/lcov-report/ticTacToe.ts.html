@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">53.28% </span>
+                <span class="strong">54.88% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>73/137</span>
+                <span class='fraction'>73/133</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">51.56% </span>
+                <span class="strong">53.22% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>66/128</span>
+                <span class='fraction'>66/124</span>
             </div>
         
             
@@ -425,14 +425,7 @@
 <a name='L360'></a><a href='#L360'>360</a>
 <a name='L361'></a><a href='#L361'>361</a>
 <a name='L362'></a><a href='#L362'>362</a>
-<a name='L363'></a><a href='#L363'>363</a>
-<a name='L364'></a><a href='#L364'>364</a>
-<a name='L365'></a><a href='#L365'>365</a>
-<a name='L366'></a><a href='#L366'>366</a>
-<a name='L367'></a><a href='#L367'>367</a>
-<a name='L368'></a><a href='#L368'>368</a>
-<a name='L369'></a><a href='#L369'>369</a>
-<a name='L370'></a><a href='#L370'>370</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L363'></a><a href='#L363'>363</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -501,14 +494,8 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -517,7 +504,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -830,7 +816,7 @@ export default class TicTacToe extends Phaser.Scene {
   constructor() {
     super('ticTacToe');
 &nbsp;
-    this.boardOffsetX = 250;
+    this.boardOffsetX = 280;
     this.boardOffsetY = 175;
     this.tileWidth = 64;
     this.tileHeight = 64;
@@ -869,25 +855,18 @@ export default class TicTacToe extends Phaser.Scene {
   }
 &nbsp;
 <span class="fstat-no" title="function not covered" >  preload(</span>) {
-<span class="cstat-no" title="statement not covered" >    this.load.image('logo', 'assets/phaser3-logo.png');</span>
-<span class="cstat-no" title="statement not covered" >    this.load.image('libs', 'assets/libs.png');</span>
+<span class="cstat-no" title="statement not covered" >    this.load.image('background', 'assets/gameBoard.png');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    this.load.image('emptySquare', 'assets/1bitblock0.png');</span>
-<span class="cstat-no" title="statement not covered" >    this.load.image('blackBorderSquare', 'assets/1bitblock2.png');</span>
-&nbsp;
-<span class="cstat-no" title="statement not covered" >    this.load.image('x', 'assets/1bitblock1.png');</span>
-<span class="cstat-no" title="statement not covered" >    this.load.image('o', 'assets/1bitblock3.png');</span>
-&nbsp;
-<span class="cstat-no" title="statement not covered" >    this.load.glsl('bundle', 'assets/plasma-bundle.glsl.js');</span>
-<span class="cstat-no" title="statement not covered" >    this.load.glsl('stars', 'assets/starfields.glsl.js');</span>
+<span class="cstat-no" title="statement not covered" >    this.load.image('blackBorderSquare', 'assets/EmptyTile.png');</span>
+<span class="cstat-no" title="statement not covered" >    this.load.image('x', 'assets/FoxTile.png');</span>
+<span class="cstat-no" title="statement not covered" >    this.load.image('o', 'assets/CatTile.png');</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    this.load.image('fire', 'assets/muzzleflash3.png');</span>
   }
 &nbsp;
 <span class="fstat-no" title="function not covered" >  create(</span>): void {
-<span class="cstat-no" title="statement not covered" >    this.add.shader('RGB Shift Field', 0, 0, 800, 600).setOrigin(0);</span>
-&nbsp;
 <span class="cstat-no" title="statement not covered" >    this.testParticle = this.add.particles('fire');</span>
+<span class="cstat-no" title="statement not covered" >    this.add.image(0, 0, 'background').setOrigin(0);</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    this.drawBoard();</span>
 <span class="cstat-no" title="statement not covered" >    this.createScores();</span>
@@ -1177,7 +1156,7 @@ export default class TicTacToe extends Phaser.Scene {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-10-30T23:48:47.848Z
+                at 2022-11-06T18:46:12.536Z
             </div>
         <script src="prettify.js"></script>
         <script>

@@ -6,8 +6,8 @@ import RpgBattleSystem from './rpgBattleSystem/rpgBattleSystem';
 const config = {
   type: Phaser.AUTO,
   backgroundColor: '#125555',
-  width: 800,
-  height: 600,
+  width: 1280,
+  height: 720,
   scene: [RpgBattleSystem, MainMenu, TicTacToe],
 };
 
